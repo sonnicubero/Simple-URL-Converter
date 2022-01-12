@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UrlconverterService } from './urlconverter/service/urlconverter.service';
 import { URLConverterComponent } from './urlconverter/urlconverter.component';
+import { UrlconverterModule } from './urlconverter/urlconverter.module';
 
 @NgModule({
   declarations: [AppComponent, URLConverterComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, UrlconverterModule],
   providers: [UrlconverterService],
   bootstrap: [AppComponent],
 })
