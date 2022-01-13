@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +10,7 @@ import { UrlconverterModule } from './urlconverter/urlconverter.module';
 
 @NgModule({
   declarations: [AppComponent, URLConverterComponent],
-  imports: [BrowserModule, AppRoutingModule, UrlconverterModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, UrlconverterModule],
   providers: [UrlconverterService],
   bootstrap: [AppComponent],
 })

@@ -1,15 +1,38 @@
-<p>convert-to-short works!</p>
-
-<div class="container">
+<h3>Convert Long URL to Short URL</h3>
+<div class="url-input-container">
   <div class="row">
     <p>
       Enter URL Here:
-      <input type="text" />
+      <input
+        type="text"
+        id="long-url"
+        class="form-control"
+        name="url"
+        [(ngModel)]="longURL"
+        required
+      />
     </p>
+    <div class="note">
+      <p><strong>*Note:</strong> Some text...</p>
+    </div>
+  </div>
+
+  <div class="tinyURL">
+    <a href="{{ longURL }}">{{ tinyURL }}</a>
   </div>
 </div>
 
-<div class="container">
+<div class="convert-button-container">
+  <div class="row">
+    <div class="col-md-5">
+      <button class="btn btn-success" (click)="onConvertToShort()">
+        Convert
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="back-button-container">
   <div class="row">
     <div class="col-md-5">
       <button appBackbutton>Back</button>

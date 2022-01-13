@@ -4,6 +4,7 @@ import { URLConverterRoutingModule } from './urlconverter-routing.module';
 import { ConvertToShortComponent } from './convert-to-short/convert-to-short.component';
 import { ConvertToLongComponent } from './convert-to-long/convert-to-long.component';
 import { BackbuttonDirective } from './shared/backbutton.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,7 @@ import { BackbuttonDirective } from './shared/backbutton.directive';
     ConvertToLongComponent,
     BackbuttonDirective,
   ],
-  imports: [CommonModule, URLConverterRoutingModule],
+  imports: [CommonModule, FormsModule, URLConverterRoutingModule],
   exports: [ConvertToShortComponent, ConvertToLongComponent],
 })
 export class UrlconverterModule {}
